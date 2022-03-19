@@ -1,14 +1,14 @@
 import React from 'react';
-
+import Style from './Card.scss'
 
 
 function Card(props) {
 
-    const {img, nameProfile, title, time, tags} = props;
+    const {img, nameProfile, title, time, tags, reaction, comment} = props;
 
     
     return (
-        <section className="card mt-4 p-4">
+        <section className="card mt-4 p-1">
             <div className="div-head">
                 <img className="img-profile " alt="Profile" src={img}/>
                 <div className="info-card">
@@ -30,8 +30,9 @@ function Card(props) {
             </div>
             <div className="footer-card">
                 <div className="fot-card-left">
-                    <a ></a>
-                    <a ></a>
+                <button className="btn-save">{`🤍 ${reaction}`}</button>
+                <button className="btn-save">{`💬 ${comment.length}`}</button>
+                    
                 </div>
                 <div className="fot-card-right">
                     <button className="btn-save">Delete</button>

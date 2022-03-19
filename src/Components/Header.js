@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Style from './Header.scss'
 
 function Header(props) {
-    
+      
+
     return(
         <header className="header">
             <section className="container-xl header-sec">

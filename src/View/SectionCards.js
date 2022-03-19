@@ -6,7 +6,7 @@ import Card from '../Components/Card';
 
 const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjZjNzA0NmQ0ZWYzYTQ4YTg3YmVkNCIsImlhdCI6MTY0NzU3ODYwMywiZXhwIjoxNjQ4MTgzNDAzfQ.LLCD6xM_9k1r_hAqiPqTsy2x1J5R1z_XiSIL1OwnU6E'
 const url = 'http://localhost:8080/post/'
-function Home() {
+function SectionCards() {
 
     const [post, setPost] = useState([]);
     const [login, setLogin] = useState(false);
@@ -28,7 +28,7 @@ function Home() {
                 let data = json.data.post;
                 setPost(data);
                 setLogin(true)
-                
+                console.log(data);
             } catch (error) {
                 console.log(error);
             }
@@ -63,7 +63,8 @@ function Home() {
                     title={post.title}
                     time={dateTwo}
                     tags={post.tags}
-                    
+                    reaction={post.reaction}
+                    comment={post.comment}
                     />
                 )
             })}
@@ -75,4 +76,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default SectionCards;

@@ -1,6 +1,6 @@
 
 import './App.scss';
-import Home from './Views';
+import Home from './View';
 
 
 
