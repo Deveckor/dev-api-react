@@ -1,14 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import EventCard from "../Components/Home-rigth-card";
 import ListingCard from "../Components/ListingCards"
 import Header from "../Components/Header";
 import SectionCards from "./SectionCards";
+import Login from "../Components/Login"
 
 
-function Home() {
+function Home(props) {
+
+    const [isLogin, setIsLogin] = useState(false)
+    const [token, setToken] = useState('');
+    const [buttonlogin, setbuttonlogin] = useState(false);
+
     return(
 <div>
-    <Header/>
+    <Header
+    setbuttonlogin = {setbuttonlogin}
+    />
     <main className="bg-light container-lg margin-header-fix">
         <section className="container">
             <div className="row">
@@ -16,7 +24,15 @@ function Home() {
                 left cards
                 </aside>
                 <section className="col-md-8 col-lg-5">
-                <SectionCards/>
+                    {!isLogin ? <div></div>: <SectionCards
+                    token={token}
+                />}
+                {!buttonlogin ? <div></div>:<Login
+                    setToken = {setToken}
+                    setIsLogin={setIsLogin}
+                    setbuttonlogin = {setbuttonlogin}
+                />}
+                
                 </section>
 
         <div className="d-none d-lg-block col-lg-1 mt-4">

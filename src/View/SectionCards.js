@@ -4,12 +4,12 @@ import Card from '../Components/Card';
 
 
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMjZjNzA0NmQ0ZWYzYTQ4YTg3YmVkNCIsImlhdCI6MTY0NzU3ODYwMywiZXhwIjoxNjQ4MTgzNDAzfQ.LLCD6xM_9k1r_hAqiPqTsy2x1J5R1z_XiSIL1OwnU6E'
-const url = 'http://localhost:8080/post/'
-function SectionCards() {
 
+const url = 'http://localhost:8080/post/'
+function SectionCards(props) {
+    const {token} = props;
     const [post, setPost] = useState([]);
-    const [login, setLogin] = useState(false);
+    
 
     useEffect(()=>{
         let option = {
@@ -27,8 +27,8 @@ function SectionCards() {
                 if(!res.ok) throw {status: res.status, statusText: res.error}
                 let data = json.data.post;
                 setPost(data);
-                setLogin(true)
-                console.log(data);
+               
+                
             } catch (error) {
                 console.log(error);
             }

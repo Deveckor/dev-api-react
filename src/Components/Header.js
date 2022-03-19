@@ -2,7 +2,12 @@ import React from 'react'
 import Style from './Header.scss'
 
 function Header(props) {
-      
+      const {setbuttonlogin} = props
+
+      const buttonLogin = ()=>{
+        setbuttonlogin(true)
+        
+      }
 
     return(
         <header className="header">
@@ -26,10 +31,10 @@ function Header(props) {
           </button>
         </div>
         <div className="header-right">
-          <button className="btn-log">
+          <button onClick={buttonLogin} className="btn-log">
             <b>Log in</b>
           </button>
-          <button className="btn-account">
+          <button  className="btn-account">
             <b>Create account</b>
           </button>
         </div>
