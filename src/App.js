@@ -1,13 +1,14 @@
 
 import './App.scss';
-import Home from './View/Home'
+import Main from './View/Main'
 import Header from './Components/Header'
 
 function App() {
   return (
     <div className="App">
         <Header/>
-        <Home/>
+
+        <Main/>
       
 
     </div>
