@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import CardSection from '../Components/CardSection/index'
+import Card from '../Components/Card';
+
 
 
 
@@ -41,9 +42,36 @@ function Home() {
     
    
     return(
-        <CardSection
-        post={post}
-        />
+        <div className="mt-3">
+            {post.map(post =>{
+                
+                let da = post.createdAt,
+                n = da.split('-'),
+                w = n[2].substring(0, 2)
+                n.pop();
+                n.push(w)
+                let date = new Date(n[0],n[1],n[2]),
+                newDate = date.toUTCString().split(' '),
+                dateTwo = `${newDate[1]} ${newDate[2]} ${newDate[3]}`
+                
+
+                return (
+                    <Card 
+                    key={post._id}
+                    img={post.author.avatar}
+                    nameProfile={post.author.name}
+                    title={post.title}
+                    time={dateTwo}
+                    tags={post.tags}
+                    
+                    />
+                )
+            })}
+        </div>
+        
+            
+        
+        
     )
 }
 

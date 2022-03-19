@@ -37,6 +37,122 @@
   }
 }
 
+// Style Header
+
+// bottones
+.btn-#{log} {
+  border: none;
+  height: 40px;
+  width: 65px;
+  color: #3b49df;
+  background: none;
+}
+.btn-#{account} {
+  border: none;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
+  width: 130px;
+  background: #3b49df;
+}
+.btn-#{account}:hover {
+  background: #323ebe;
+}
+.btn-#{log}:hover {
+  background: rgb(231, 231, 231);
+  border-radius: 5px;
+}
+// seccion Header
+
+.header {
+  background-color: white;
+  border-bottom: 1.5px solid rgb(187, 187, 187);
+  max-width: 100vw;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  // display: flex;
+  // justify-content: center;
+
+  .header-sec {
+    display: flex;
+    margin-left: auto;
+    background-color: white;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid rgb(187, 187, 187);
+    align-items: center;
+    height: 56px;
+    justify-content: space-between;
+    //max-width: 1120px;
+
+    .header-left {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      .btn-hamburger {
+        display: none;
+      }
+      .logo {
+        margin: 0.5rem;
+        border-radius: 3px;
+        width: 50px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .search-input {
+        margin-left: 10px;
+        width: 420px;
+        height: 40px;
+        border-radius: 5px;
+        border: 0.5px solid rgb(201, 201, 201);
+      }
+      .search-input:hover {
+        border: 1px solid rgb(136, 136, 136);
+      }
+      .search-input[type="search"]:focus {
+        outline-style: none;
+        border: 2px solid #3b49df;
+      }
+      .btn-search {
+        border: none;
+        background: none;
+        width: 2.3rem;
+        height: 2.3rem;
+        position: relative;
+        right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+      .btn-search:hover {
+        background: rgb(231, 231, 231);
+        border-radius: 50%;
+      }
+    }
+    .header-#{right} {
+      width: 240px;
+      height: inherit;
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+  }
+}
+// Style Header
 
 // Style Card
 .div-head {
@@ -150,3 +266,4 @@
   margin-right: 15px;
 }
 // Style Card
+
