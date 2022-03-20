@@ -5,7 +5,7 @@ import ButtonLogout from "./Buttons/ButonLogout";
 import search from "../assets/search.png"
 
 function Header(props) {
-  const { setbuttonlogin, token, setToken } = props;
+  const { setbuttonlogin, token, setToken, setCreateAccount } = props;
 
   return (
     <header className="header">
@@ -46,7 +46,7 @@ function Header(props) {
           ) : (
             <ButtonLogout setToken={setToken} />
           )}
-          <button className="btn-account">
+          <button onClick={()=>{ setCreateAccount(true)}} className="btn-account">
             <b>Create account</b>
           </button>
         </div>

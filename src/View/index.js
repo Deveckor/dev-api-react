@@ -4,11 +4,12 @@ import ListingCard from "../Components/ListingCards"
 import Header from "../Components/Header";
 import SectionCards from "./SectionCards";
 import Login from "../Components/Login"
-
+import CreateAccount from "../Components/CreateAccount"
 
 function Home(props) {
 
     const [isLogin, setIsLogin] = useState(false)
+    const [createAccount, setCreateAccount] = useState(false)
     const [token, setToken] = useState('');
     const [buttonlogin, setbuttonlogin] = useState(false);
 
@@ -19,6 +20,7 @@ function Home(props) {
     token = {token}
     setToken = {setToken}
     buttonlogin = {buttonlogin}
+    setCreateAccount = {setCreateAccount}
     />
     <main className="container-lg margin-header-fix">
         <section className="container">
@@ -27,10 +29,13 @@ function Home(props) {
                 left cards
                 </aside>
                 <section className="col-md-8 col-lg-5">
-                    {!token ? null: <SectionCards
+                    {!createAccount? null: <CreateAccount
+                    setCreateAccount = {setCreateAccount}
+                    />}
+                    {!token || createAccount === true ? null: <SectionCards
                     token={token}
                 />}
-                {!buttonlogin ? null:<Login
+                {!buttonlogin || createAccount === true? null:<Login
                     setToken = {setToken}
                     setIsLogin={setIsLogin}
                     setbuttonlogin = {setbuttonlogin}
