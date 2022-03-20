@@ -65,6 +65,7 @@ function SectionCards(props) {
                     tags={post.tags}
                     reaction={post.reaction}
                     comment={post.comment}
+                    back={post.image}
                     />
                 )
             })}

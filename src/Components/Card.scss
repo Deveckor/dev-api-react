@@ -33,15 +33,15 @@
     }
     .tags {
       display: flex;
-      align-items: center;
+      width: 100%;
+      flex-direction: wrap;
       
-      height: 40px;
+      justify-content: space-around;
       color: black;
   
       a {
-        display: flex;
-        padding: 10px;
-        align-items: center;
+        
+        padding: auto;
         text-decoration: none;
         color: slategray;
         height: 30px;
@@ -51,7 +51,7 @@
         background: rgb(231, 231, 231);
     
         border-radius: 5px;
-        color: black;
+        
       }
     }
   

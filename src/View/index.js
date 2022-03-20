@@ -16,6 +16,9 @@ function Home(props) {
 <div>
     <Header
     setbuttonlogin = {setbuttonlogin}
+    token = {token}
+    setToken = {setToken}
+    buttonlogin = {buttonlogin}
     />
     <main className="bg-light container-lg margin-header-fix">
         <section className="container">
@@ -24,10 +27,10 @@ function Home(props) {
                 left cards
                 </aside>
                 <section className="col-md-8 col-lg-5">
-                    {!isLogin ? <div></div>: <SectionCards
+                    {!token ? null: <SectionCards
                     token={token}
                 />}
-                {!buttonlogin ? <div></div>:<Login
+                {!buttonlogin ? null:<Login
                     setToken = {setToken}
                     setIsLogin={setIsLogin}
                     setbuttonlogin = {setbuttonlogin}

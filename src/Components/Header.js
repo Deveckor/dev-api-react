@@ -1,13 +1,13 @@
 import React from 'react'
 import Style from './Header.scss'
+import ButtonLogin from './Buttons/BottonLogin'
+import ButtonLogout from './Buttons/ButonLogout'
 
 function Header(props) {
-      const {setbuttonlogin} = props
+      const {setbuttonlogin, token, setToken} = props
 
-      const buttonLogin = ()=>{
-        setbuttonlogin(true)
-        
-      }
+      
+      
 
     return(
         <header className="header">
@@ -31,9 +31,13 @@ function Header(props) {
           </button>
         </div>
         <div className="header-right">
-          <button onClick={buttonLogin} className="btn-log">
-            <b>Log in</b>
-          </button>
+          {!token ? 
+          <ButtonLogin
+          setbuttonlogin = {setbuttonlogin}
+          />
+          : <ButtonLogout
+          setToken = {setToken}
+          />}
           <button  className="btn-account">
             <b>Create account</b>
           </button>

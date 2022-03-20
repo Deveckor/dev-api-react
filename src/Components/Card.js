@@ -4,11 +4,12 @@ import Style from './Card.scss'
 
 function Card(props) {
 
-    const {img, nameProfile, title, time, tags, reaction, comment} = props;
+    const {img, nameProfile, title, time, tags, reaction, comment, back} = props;
 
     
     return (
         <section className="card mt-4 p-1">
+            <img src={back} className=""/>
             <div className="div-head">
                 <img className="img-profile " alt="Profile" src={img}/>
                 <div className="info-card">
@@ -24,7 +25,7 @@ function Card(props) {
                 
                     {tags.map((tag, index) => {
 
-                        return <a key={index}  className="me-3">{`#${tag}`} </a>;
+                        return <a key={index} >{`#${tag}`} </a>;
                     })}
                     
             </div>
