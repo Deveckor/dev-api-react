@@ -6,7 +6,7 @@ import Home from './View';
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-light">
 
       <Home />
       

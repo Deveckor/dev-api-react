@@ -92,7 +92,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          svg {
+          img {
             width: 1.5rem;
             height: 1.5rem;
           }
@@ -115,4 +115,48 @@
   }
   // Style Header
   
+  @media (max-width: 768px) {
+    .header {
+      .header-sec {
+        .header-left {
+          .search-input {
+            display: none;
+            width: 0;
+          }
   
+          .btn-hamburger {
+            display: flex;
+            align-items: center;
+            border: none;
+            height: 40px;
+            width: 40px;
+            background: none;
+  
+            svg {
+              height: 30px;
+              width: 30px;
+            }
+          }
+          .btn-hamburger:hover {
+            background: rgb(231, 231, 231);
+            border-radius: 50%;
+          }
+          .btn-search {
+            position: initial;
+            margin-left: auto;
+            svg {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
+        }
+      }
+      .header-#{right} {
+        max-width: 140px;
+  
+        .btn-#{log} {
+          display: none;
+        }
+      }
+    }
+  }
