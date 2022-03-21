@@ -1,17 +1,17 @@
+import {Link} from 'react-router-dom'
 
 
 
-
-function ButtonLogin(props) {
-    const {setbuttonlogin} = props;
-    const buttonLogin = ()=>{
-        setbuttonlogin(true)
-        
-      }
+function ButtonLogin() {
+   
+   
     return(
-        <button onClick={buttonLogin} className="btn-log">
+        <Link to={'login'}>
+
+        <button className="btn-log">
             <b>Log in</b>
           </button>
+        </Link>
     )
 }
 

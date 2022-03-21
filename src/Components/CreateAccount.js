@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { Form, Button } from "react-bootstrap";
+import {useNavigate} from 'react-router-dom'
 
 function CreateAccount(props) {
+  let navigate = useNavigate();
     const {setCreateAccount} = props;
     const url = 'http://localhost:8080/writer/signup'
     const [writer, setWriter] = useState({
@@ -30,6 +32,7 @@ function CreateAccount(props) {
 
             setCreateAccount(false)
             alert('Successfully created')
+            navigate('/')
         } catch (error) {
             alert(error)
         }
@@ -66,10 +69,11 @@ function CreateAccount(props) {
         <Form.Control onChange={onChange} type="password" name="password" placeholder="Enter your password..." />
       </Form.Group>
       
-      
+     
       <Button variant="primary" type="submit">
         Submit
       </Button>
+      
     </Form>
   );
 }

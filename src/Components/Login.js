@@ -1,8 +1,10 @@
 import {Form, Button} from 'react-bootstrap'
 import React, {useEffect, useState} from 'react'
+import { useNavigate } from "react-router-dom";
 
 function Login(props){
-    const {setToken, setbuttonlogin, setIsLogin} = props;
+    let navigate = useNavigate();
+    const {setToken, setIsLogin, isLogin} = props;
     
     const [login, setLogin] = useState({
         email: '',
@@ -14,7 +16,7 @@ function Login(props){
     const loginApi = async (e) =>{
         e.preventDefault();
         
-        
+                
         
                 let option = {
                     method: 'POST',
@@ -27,11 +29,11 @@ function Login(props){
                 let json = await res.json();
                 
                 setToken(json.data.token);
-                setbuttonlogin(false);
+                
                 setIsLogin(true);
+                navigate('/');
                 
-               
-                
+            
 
             
             
@@ -69,10 +71,14 @@ function Login(props){
     onChange={onChange}
     />
   </Form.Group>
-  
+ 
+        
+
   <Button variant="primary" type="submit">
     Submit
   </Button>
+        
+  
 </Form>
     )
 }

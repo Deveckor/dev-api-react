@@ -1,14 +1,15 @@
 
 import './App.scss';
-import Home from './View';
+import Layout from './pages/Layout';
+
 
 
 
 function App() {
   return (
     <div className="bg-light">
-
-      <Home />
+      
+     <Layout/>
       
     </div>
   );

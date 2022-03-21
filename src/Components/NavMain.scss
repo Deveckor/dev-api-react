@@ -1,0 +1,20 @@
+nav {
+    height: 43px;
+    display: flex;
+
+    span {
+      margin-right:10px;
+      
+      font-size: 1.2rem;
+      color: black;
+      
+
+      display: flex;
+      align-items: center;
+      
+    }
+    span:hover {
+      
+      color: #323ebe;
+    }
+}
