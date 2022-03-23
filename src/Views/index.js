@@ -1,6 +1,7 @@
 import React from "react";
 import EventCard from "../Components/Home-rigth-card";
 import ListingCard from "../Components/ListingCards"
+
 function Home() {
     return(
 <div>

@@ -30,8 +30,61 @@ function EventCard() {
             </Button>
           </Card.Text>
           <div className="d-grid gap-2">
-          <Button size="lg" variant="primary">Submit Your Project!</Button>
-          <Button size="lg" variant="secondary">See all posts</Button>
+            <Button size="lg" variant="primary">
+              Submit Your Project!
+            </Button>
+            <Button size="lg" variant="secondary">
+              See all posts
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+
+      {/* 2nd Card*/}
+
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" />
+        <Card.Body>
+          <Card.Title>
+            <p class="crayons-card_header">
+              Listings</p> <a href="https://dev.to/listings" class="crayons-link--branded fw-medium fs-s">See all</a>
+            
+          </Card.Title>
+          <Card.Text>
+            <Button variant="link">
+              <p class="text-sm-start">
+                High paying remote software developer jobs! Senior + Experienced
+                Devs Wanted! Top Jobs! Revolutionary Platform
+              </p>
+            </Button>
+            <p class="crayons-link_secondary">misc</p>
+
+            <Button variant="link">
+              <p class="text-sm-start">
+                Senior React Native Developer - Remote
+              </p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+
+            <Button variant="link">
+              <p class="text-sm-start">Senior Go Developer - Remote</p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+
+            <Button variant="link">
+              <p class="text-sm-start">Senior Blochkchain Developer - Remote</p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+            <Button variant="link">
+              <p class="text-sm-start">Senior React Developer -Remote</p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+          </Card.Text>
+          <div className="d-grid gap-2">
+            <Button variant="link">
+              <p class="text-sm-center">Create Listing</p>
+
+            </Button>
           </div>
         </Card.Body>
       </Card>
@@ -40,3 +93,4 @@ function EventCard() {
 }
 
 export default EventCard;
+
