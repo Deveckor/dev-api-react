@@ -47,7 +47,7 @@ function EventCard() {
         <Card.Body>
           <Card.Title>
             <p class="crayons-card_header">
-              Listings</p> <a href="https://dev.to/listings" class="crayons-link--branded fw-medium fs-s">See all</a>
+              <strong>Listings</strong></p> <a href="https://dev.to/listings" class="crayons-link--branded fw-medium fs-s">See all</a>
             
           </Card.Title>
           <Card.Text>
@@ -88,6 +88,56 @@ function EventCard() {
           </div>
         </Card.Body>
       </Card>
+       {/* 3rd Card*/}
+       <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" />
+        <Card.Body>
+          <Card.Title>
+            <p class="crayons-card_header">
+              <strong>#help</strong></p> <a href="https://dev.to/listings" class="crayons-link--branded fw-medium fs-s">See all</a>
+            
+          </Card.Title>
+          <Card.Text>
+            <Button variant="link">
+              <p class="text-sm-start">
+              How I can apply a network_security_config.xml on specific variants and not in release one?
+
+              </p>
+            </Button>
+            <p class="crayons-link_secondary">misc</p>
+
+            <Button variant="link">
+              <p class="text-sm-start">
+                Senior React Native Developer - Remote
+              </p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+
+            <Button variant="link">
+              <p class="text-sm-start">Senior Go Developer - Remote</p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+
+            <Button variant="link">
+              <p class="text-sm-start">Senior Blochkchain Developer - Remote</p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+            <Button variant="link">
+              <p class="text-sm-start">Senior React Developer -Remote</p>
+            </Button>
+            <p class="text-sm-start">jobs</p>
+          </Card.Text>
+          <div className="d-grid gap-2">
+            <Button variant="link">
+              <p class="text-sm-center">Create Listing</p>
+
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+
+
+
     </div>
   );
 }
