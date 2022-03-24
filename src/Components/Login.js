@@ -10,7 +10,7 @@ function Login(props){
         email: '',
         password: ''
     });
-    const url = 'http://localhost:8080/writer/login';
+    const url = 'https://vercel.com/deveckor/api-dev-to/writer/login';
 
 
     const loginApi = async (e) =>{

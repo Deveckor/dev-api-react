@@ -15,7 +15,7 @@ function CreatePost(props) {
 
    
         
-        let url = 'http://localhost:8080/post/';
+        let url = 'https://vercel.com/deveckor/api-dev-to/post/';
 
 
 
