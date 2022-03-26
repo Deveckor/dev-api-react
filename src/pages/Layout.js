@@ -38,8 +38,9 @@ function Layout(props) {
       
         <section className="container">
           <div className="row">
-            <aside className="col-md-4 col-lg-3 flex-shrink-2 d-none d-md-block mt-4">
-            <div className="d-none d-lg-block mt-4">
+            <aside className="col-md-4 col-lg-3  d-none d-md-block mt-4">
+            
+              
               <DevCommunityCard />
               <HomeListGroup />
               <OtherListGroup />

@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 function DevCommunityCard() {
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card className="m-0 ">
         <Card.Body>
         <Card.Title><Button variant="link" style={{textDecoration: "none"}} > <h5>DEV Community</h5> </Button> is a community of 816,666 amazing developers</Card.Title>
           <Card.Text>

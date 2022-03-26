@@ -14,7 +14,7 @@ function SectionWriters() {
                 let res = await fetch(url);
                 let json =await res.json();
                 console.log(json);
-                if (!res.ok) throw {status: res.status, statusText: res.error}
+                if (!res.ok) throw new Error({status: res.status, statusText: res.error})
                 let data = json.data.writers;
                 setWriters(data)
                 console.log(writer);

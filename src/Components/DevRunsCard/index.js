@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 function DevRunsCard() {
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card className="m-0 mt-4">
         <Card.Body>
           <Card.Text>
             DEV runs on 100% open source code known as Forem. Contribute to the
