@@ -7,7 +7,7 @@ function DevCommunityCard() {
   return (
     <div>
       <Link to="DevCommunityCard">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "auto" }} className="m-0 mt-4">
         <Card.Body>
         <Card.Title style={{textDecoration: "none"}}><Button variant="link" style={{textDecoration: "none"}} > <h5>DEV Community</h5> </Button> is a community of 816,666 amazing developers</Card.Title>
           <Card.Text>

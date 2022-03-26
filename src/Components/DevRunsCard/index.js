@@ -7,7 +7,7 @@ function DevRunsCard() {
   return (
     <div>
       <Link to="DevRunsCard">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "auto" }} className="m-0 mt-4">
         <Card.Body>
           <Card.Text>
             DEV runs on 100% open source code known as Forem. Contribute to the

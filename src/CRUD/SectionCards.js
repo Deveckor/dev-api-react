@@ -56,7 +56,7 @@ function SectionCards(props) {
                 
 
                 return (
-                    <Card 
+                    <Card
                     key={post._id}
                     img={post.author.avatar}
                     nameProfile={post.author.name}

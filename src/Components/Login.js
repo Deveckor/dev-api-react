@@ -1,10 +1,11 @@
 import {Form, Button} from 'react-bootstrap'
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import { useNavigate } from "react-router-dom";
 
 function Login(props){
+    
     let navigate = useNavigate();
-    const {setToken, setIsLogin, isLogin} = props;
+    const {setToken, setIsLogin, token} = props;
     
     const [login, setLogin] = useState({
         email: '',
@@ -28,16 +29,17 @@ function Login(props){
                 let res = await fetch(url, option);
                 let json = await res.json();
                 
-                setToken(json.data.token);
+                await setToken(json.data.token);
                 
-                setIsLogin(true);
+                await setIsLogin(true);
                 navigate('/');
                 
-            
+                
 
-            
-            
-        }
+                
+                
+            }
+            localStorage.setItem('token', token)
 
     const onChange = (e)=>{
         

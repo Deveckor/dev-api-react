@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './Card.scss'
+require('./Card.scss')
 
 
 function Card(props) {
@@ -9,23 +9,23 @@ function Card(props) {
     
     return (
         <section className="card mt-4 p-1">
-            <img src={back} className=""/>
+            <img src={back} alt={back}/>
             <div className="div-head">
                 <img className="img-profile " alt="Profile" src={img}/>
                 <div className="info-card">
-                    <a className="name-profile">{nameProfile}</a>
+                    <a href="/post" className="name-profile">{nameProfile}</a>
                     <span>{time}</span>
                 </div>
             </div>
             <div className="container-card">
                 <h2 className="sub-title">
-                    <a href="#" >{title}</a>
+                    <a href="/post" >{title}</a>
                 </h2>
             <div className="tags">
                 
                     {tags.map((tag, index) => {
 
-                        return <a key={index} >{`#${tag}`} </a>;
+                        return <a href="/post" key={index} >{`#${tag}`} </a>;
                     })}
                     
             </div>

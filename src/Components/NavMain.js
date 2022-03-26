@@ -1,23 +1,22 @@
-import {Link} from 'react-router-dom';
-import Style from './NavMain.scss'
+require('./NavMain.scss');
 
 function NavMain() {
     
 
     return (
         <nav className="mt-4">
-            <Link to={'post'}>
+           
 
-          <span ><b>Post </b></span>
-            </Link>
-            <Link to={'writers'}>
+          <a href='/post'><b>Post </b></a>
+           
+            
 
-          <span>Writers</span>
-            </Link>
-            <Link to={'CreatePost'}>
+          <a href='/writers'>Writers</a>
+           
+            
 
-          <span>Create Post</span>
-            </Link>
+          <a href='/CreatePost'>Create Post</a>
+            
         </nav>
 
     )
