@@ -8,6 +8,7 @@ function ButtonLogout(props) {
     const buttonLogout = ()=>{
         setToken('')
         setIsLogin(false)
+        localStorage.removeItem('token');
         navigate('/')
       }
 
