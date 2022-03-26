@@ -1,12 +1,12 @@
 import React from "react";
 import {Link} from 'react-router-dom'
-import Style from "./Header.scss";
 import ButtonLogin from "./Buttons/BottonLogin";
 import ButtonLogout from "./Buttons/ButonLogout";
 import search from "../assets/search.png"
+require("./Header.scss");
 
 function Header(props) {
-  const { setbuttonlogin, isLogin, setIsLogin,setToken, logoutsetToken, setCreateAccount } = props;
+  const {  isLogin, setIsLogin,setToken} = props;
 
   return (
     <header className="header">
@@ -38,7 +38,7 @@ function Header(props) {
             placeholder="Search..."
           />
           <button className="btn-search">
-          <img src={search}/>
+          <img src={search} alt={search} />
           </button>
         </div>
         <div className="header-right">
@@ -46,7 +46,10 @@ function Header(props) {
           {!isLogin ? (
             <ButtonLogin/>
           ) : (
-            <ButtonLogout setToken={setToken} setIsLogin={setIsLogin}/>
+            <ButtonLogout 
+            setToken={setToken} 
+            setIsLogin={setIsLogin}
+            />
           )}
           <Link to={'CreateAccount'}>
           <button  className="btn-account">

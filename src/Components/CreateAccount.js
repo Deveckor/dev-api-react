@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import { Form, Button } from "react-bootstrap";
 import {useNavigate} from 'react-router-dom'
 
@@ -28,11 +28,11 @@ function CreateAccount(props) {
                 body: JSON.stringify(writer)
             }
             let res = await fetch(url, options);
-            let json = res.json();
-
+            
             setCreateAccount(false)
             alert('Successfully created')
             navigate('/')
+            return res;
         } catch (error) {
             alert(error)
         }
