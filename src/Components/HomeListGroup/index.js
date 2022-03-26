@@ -1,10 +1,12 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import {Link} from 'react-router-dom';
 
 function HomeListGroup() {
   return (
     <div>
+      <Link to="HomeListGroup">
       <ListGroup>
         <ListGroup.Item style={{ border: "none" }} action variant="light">
         <Button variant="link"> <img src="/assets/home-icon.svg" alt="icon"/> Home</Button></ListGroup.Item>
@@ -27,6 +29,7 @@ function HomeListGroup() {
         <ListGroup.Item style={{ border: "none" }} action variant="light">
         <Button variant="link"> <img src="/assets/contact-icon.svg" alt="icon"/> Contact</Button></ListGroup.Item>
       </ListGroup>
+      </Link>
     </div>
   );
 }

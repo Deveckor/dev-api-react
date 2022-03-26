@@ -37,7 +37,7 @@ function Layout(props) {
       />
       
         <section className="container">
-          <div className="row">
+          <div className="row"
             <aside className="col-md-4 col-lg-3  d-none d-md-block mt-4">
             
               
@@ -47,6 +47,14 @@ function Layout(props) {
               <MyTagsListGroup />
               <CodeNewbieCard />
               <DevRunsCard />
+              {/*<Routes>
+                <Route path="DevCommunityCard" element={<DevCommunityCard/> }/> 
+                <Route path="HomeListGroup" element={<HomeListGroup/> }/>
+                <Route path="therListGroup" element={<OtherListGroup/> }/>
+                <Route path="MyTagsListGroup" element={<MyTagsListGroup/> }/>
+                <Route path="CodeNewbieCard" element={<CodeNewbieCard/> }/>
+                <Route path="DevRunsCard" element={<DevRunsCard/> }/> 
+              </Routes>*/}
             
             </aside>
             <section className="col-md-8 col-lg-5">
