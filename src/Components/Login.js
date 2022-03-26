@@ -10,7 +10,7 @@ function Login(props){
         email: '',
         password: ''
     });
-    const url = 'http://localhost:8080/writer/login';
+    const url = 'https://api-devto.herokuapp.com/writer/login';
 
 
     const loginApi = async (e) =>{
