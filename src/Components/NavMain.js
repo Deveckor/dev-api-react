@@ -8,15 +8,15 @@ function NavMain() {
         <nav className="mt-4">
             <Link to={'post'}>
 
-          <span href=""><b>Post</b></span>
+          <span ><b>Post </b></span>
             </Link>
             <Link to={'writers'}>
 
-          <span href="">Writers</span>
+          <span>Writers</span>
             </Link>
             <Link to={'CreatePost'}>
 
-          <span href="">Create Post</span>
+          <span>Create Post</span>
             </Link>
         </nav>
 

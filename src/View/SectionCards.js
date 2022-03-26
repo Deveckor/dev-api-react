@@ -5,7 +5,7 @@ import Card from '../Components/Card';
 
 
 
-const url = 'http://localhost:8080/post/'
+const url = 'https://api-devto.herokuapp.com/post/'
 function SectionCards(props) {
     const {token} = props;
     const [post, setPost] = useState([]);
