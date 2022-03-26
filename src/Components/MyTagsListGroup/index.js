@@ -2,9 +2,11 @@ import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import "./index.scss"
+import {Link} from 'react-router-dom';
 function MyTagsListGroup() {
   return (
     <div>
+      <Link to="MyTagsListGroup">
       <ListGroup className="scroll" >
         <ListGroup.Item style={{ width: "18rem", border: "none" }}> <h5>Popular Tags </h5></ListGroup.Item>
         <ListGroup.Item style={{ width: "18rem", border: "none" }} action variant="light">
@@ -54,6 +56,7 @@ function MyTagsListGroup() {
         <ListGroup.Item style={{ width: "18rem", border: "none" }} action variant="light">
         <Button variant="link">#vim</Button></ListGroup.Item>
       </ListGroup>
+      </Link>    
     </div>
   );
 }

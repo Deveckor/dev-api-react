@@ -1,10 +1,12 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import {Link} from 'react-router-dom';
 
 function DevRunsCard() {
   return (
     <div>
+      <Link to="DevRunsCard">
       <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Text>
@@ -18,6 +20,7 @@ function DevRunsCard() {
           </div>
         </Card.Body>
       </Card>
+      </Link>
     </div>
   );
 }

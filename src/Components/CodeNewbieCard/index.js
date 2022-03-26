@@ -1,10 +1,12 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import {Link} from 'react-router-dom';
 
 function CodeNewbieCard() {
   return (
     <div>
+      <Link to="CodeNewbieCard">
       <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"
@@ -22,6 +24,7 @@ function CodeNewbieCard() {
           <Button variant="link" style={{textDecoration: "none"}} >Get in on the fun!</Button>
         </Card.Body>
       </Card>
+      </Link>
     </div>
   );
 }

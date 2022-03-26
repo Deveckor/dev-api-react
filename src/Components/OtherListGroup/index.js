@@ -1,10 +1,12 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import {Link} from 'react-router-dom';
 
 function OtherListGroup() {
   return (
     <div>
+      <Link to="OtherListGroup">
       <ListGroup >
         <ListGroup.Item style={{ width: "18rem", border: "none" }}> <h5>Other</h5> </ListGroup.Item>
         <ListGroup.Item style={{ width: "18rem", border: "none" }} action variant="light">
@@ -20,7 +22,8 @@ function OtherListGroup() {
         <ListGroup.Item style={{border: "none"}} action variant="light"> <img src="/assets/github-icon.svg" alt="icon"/> </ListGroup.Item>
         <ListGroup.Item style={{border: "none"}} action variant="light"> <img src="/assets/instagram-icon.svg" alt="icon"/> </ListGroup.Item>
         <ListGroup.Item style={{ border: "none" }} action variant="light"> <img src="/assets/twitch-icon.svg" alt="icon"/> </ListGroup.Item>
-        </ListGroup>      
+        </ListGroup>
+      </Link>      
     </div>
   );
 }

@@ -33,12 +33,20 @@ function Layout() {
           <div className="row">
             <aside className="col-md-4 col-lg-3 flex-shrink-2 d-none d-md-block mt-4">
             <div className="d-none d-lg-block mt-4">
-              <DevCommunityCard />
-              <HomeListGroup />
-              <OtherListGroup />
-              <MyTagsListGroup />
-              <CodeNewbieCard />
-              <DevRunsCard />
+            <DevCommunityCard/>
+            <HomeListGroup/>
+            <OtherListGroup/>      
+            <MyTagsListGroup/>
+            <CodeNewbieCard/>
+            <DevRunsCard/>          
+              {/*<Routes>
+                <Route path="DevCommunityCard" element={<DevCommunityCard/> }/> 
+                <Route path="HomeListGroup" element={<HomeListGroup/> }/>
+                <Route path="therListGroup" element={<OtherListGroup/> }/>
+                <Route path="MyTagsListGroup" element={<MyTagsListGroup/> }/>
+                <Route path="CodeNewbieCard" element={<CodeNewbieCard/> }/>
+                <Route path="DevRunsCard" element={<DevRunsCard/> }/> 
+              </Routes>*/}
             </div>
             </aside>
             <section className="col-md-8 col-lg-5">
