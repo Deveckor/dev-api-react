@@ -5,21 +5,21 @@ import Button from "react-bootstrap/Button";
 function OtherListGroup() {
   return (
     <div>
-      <ListGroup>
-        <ListGroup.Item style={{ width: "18rem" }}>Other</ListGroup.Item>
-        <ListGroup.Item style={{ width: "18rem" }} action variant="light">
-        <Button variant="link">Code of Conduct</Button></ListGroup.Item>
-        <ListGroup.Item style={{ width: "18rem" }} action variant="light">
-        <Button variant="link">Privacy Policy</Button></ListGroup.Item>
-        <ListGroup.Item style={{ width: "18rem" }} action variant="light">
-        <Button variant="link">Terms of use</Button></ListGroup.Item>
+      <ListGroup >
+        <ListGroup.Item style={{ width: "18rem", border: "none" }}> <h5>Other</h5> </ListGroup.Item>
+        <ListGroup.Item style={{ width: "18rem", border: "none" }} action variant="light">
+        <Button variant="link"> <img src="/assets/codeofconduct-icon.svg" alt="icon"/> Code of Conduct</Button></ListGroup.Item>
+        <ListGroup.Item style={{ width: "18rem", border: "none" }} action variant="light">
+        <Button variant="link"> <img src="/assets/privacypolicy-icon.svg" alt="icon"/> Privacy Policy</Button></ListGroup.Item>
+        <ListGroup.Item style={{ width: "18rem", border: "none" }} action variant="light">
+        <Button variant="link"> <img src="/assets/termsofuse-icon.svg" alt="icon"/> Terms of use</Button></ListGroup.Item>
       </ListGroup>
-        <ListGroup horizontal>
-        <ListGroup.Item>Twitter</ListGroup.Item>
-        <ListGroup.Item>Facebook</ListGroup.Item>
-        <ListGroup.Item>Github</ListGroup.Item>
-        <ListGroup.Item>Instagram</ListGroup.Item>
-        <ListGroup.Item>Twitch</ListGroup.Item>
+        <ListGroup horizontal >
+        <ListGroup.Item style={{border: "none"}} action variant="light"> <img src="/assets/twitter-icon.svg" alt="icon"/> </ListGroup.Item>
+        <ListGroup.Item style={{border: "none"}} action variant="light"> <img src="/assets/facebook-icon.svg" alt="icon"/> </ListGroup.Item>
+        <ListGroup.Item style={{border: "none"}} action variant="light"> <img src="/assets/github-icon.svg" alt="icon"/> </ListGroup.Item>
+        <ListGroup.Item style={{border: "none"}} action variant="light"> <img src="/assets/instagram-icon.svg" alt="icon"/> </ListGroup.Item>
+        <ListGroup.Item style={{ border: "none" }} action variant="light"> <img src="/assets/twitch-icon.svg" alt="icon"/> </ListGroup.Item>
         </ListGroup>      
     </div>
   );

@@ -13,8 +13,8 @@ function DevRunsCard() {
           </Card.Text>
           <Card.Title>Check these out! 👇</Card.Title>
           <div>
-            <Button variant="link">Main Forem Repo</Button>
-            <Button variant="link">Self-Host Instructions</Button>
+            <Button variant="link" style={{textDecoration: "none"}}>Main Forem Repo</Button>
+            <Button variant="link" style={{textDecoration: "none"}}>Self-Host Instructions</Button>
           </div>
         </Card.Body>
       </Card>

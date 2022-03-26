@@ -19,7 +19,7 @@ function CodeNewbieCard() {
             Join CodeNewbie Community: a supportive space for coding newbies to
             connect & express themselves.
           </Card.Text>
-          <Button variant="link">Get in on the fun!</Button>
+          <Button variant="link" style={{textDecoration: "none"}} >Get in on the fun!</Button>
         </Card.Body>
       </Card>
     </div>
