@@ -13,11 +13,13 @@ import HomeListGroup from "../Components/HomeListGroup";
 import OtherListGroup from "../Components/OtherListGroup";
 import MyTagsListGroup from "../Components/MyTagsListGroup";
 import CreatePost from "../Components/CreatePost";
-import SectionWriters from '../CRUD/SectionWriters'
+import SectionWriters from '../CRUD/SectionWriters';
+import UpdatePost from "../CRUD/UpdatePost";
+import UpdateWriter from "../CRUD/UpdateWriter";
 
 function Layout(props) {
-  const {token,setToken, isLogin, setIsLogin} = props;
-  
+  const {token,setToken, isLogin, setIsLogin, id} = props;
+ 
   if (localStorage.getItem('token')) {
     
     setIsLogin(true);
@@ -49,7 +51,7 @@ function Layout(props) {
               <DevRunsCard />
             
             </aside>
-            <section className="col-md-8 col-lg-5">
+            <section className="col-md-8 col-lg-6">
                 {!isLogin ? null : <NavMain/>}
                 <Routes>
                   <Route 
@@ -87,6 +89,18 @@ function Layout(props) {
                   <Route
                   path="CreatePost"
                   element={<CreatePost
+                  token={token}
+                  />}
+                  />
+                  <Route
+                  path={`updatePost/:id`}
+                  element={<UpdatePost
+                  token={token}
+                  />}
+                  />
+                  <Route
+                  path='updateWriter/:id'
+                  element={<UpdateWriter
                   token={token}
                   />}
                   />

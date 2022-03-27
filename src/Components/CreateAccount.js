@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom'
 
 function CreateAccount(props) {
   let navigate = useNavigate();
-    const {setCreateAccount} = props;
+    
     const url = 'https://api-devto.herokuapp.com/writer/signup'
     const [writer, setWriter] = useState({
         
@@ -29,9 +29,9 @@ function CreateAccount(props) {
             }
             let res = await fetch(url, options);
             
-            setCreateAccount(false)
+            
             alert('Successfully created')
-            navigate('/')
+            navigate('/writers')
             return res;
         } catch (error) {
             alert(error)

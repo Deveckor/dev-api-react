@@ -7,15 +7,25 @@ function CreatePost(props) {
     const { token} = props;
     const [data , setData] = useState({reaction:0});
     const onChange = (e) =>{
-        setData({
-            ...data,
-            [e.target.name]: e.target.value
-        })
+      let tag = '';
+      let tags
+      if(e.target.name === 'tags'){
+          
+          tags = e.target.value
+          tag = tags.split(',')
+      }
+      
+      setData({
+          ...data,
+          [e.target.name]: e.target.value,
+          "tags": tag
+          
+      })
     }
 
    
         
-        let url = 'http://localhost:8080/post/';
+        let url = 'https://api-devto.herokuapp.com/post/';
 
 
 

@@ -17,7 +17,7 @@ function SectionWriters() {
                 if (!res.ok) throw new Error({status: res.status, statusText: res.error})
                 let data = json.data.writers;
                 setWriters(data)
-                console.log(writer);
+                
             } catch (error) {
                 return (
                     <h2>{error}</h2>
@@ -40,6 +40,7 @@ function SectionWriters() {
                     bio={writer.bio}
                     nationality={writer.nationality}
                     name={writer.name}
+                    id={writer._id}
                     />
                     )
                 })}

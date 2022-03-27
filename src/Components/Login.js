@@ -32,7 +32,7 @@ function Login(props){
                 await setToken(json.data.token);
                 
                 await setIsLogin(true);
-                navigate('/');
+                navigate('/post');
                 
                 
 

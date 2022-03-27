@@ -54,10 +54,12 @@ function SectionCards(props) {
                 newDate = date.toUTCString().split(' '),
                 dateTwo = `${newDate[1]} ${newDate[2]} ${newDate[3]}`
                 
-
+                
                 return (
                     <Card
+                    token={token}
                     key={post._id}
+                    id={post._id}
                     img={post.author.avatar}
                     nameProfile={post.author.name}
                     title={post.title}
@@ -66,6 +68,7 @@ function SectionCards(props) {
                     reaction={post.reaction}
                     comment={post.comment}
                     back={post.image}
+                    post={post}
                     />
                 )
             })}
