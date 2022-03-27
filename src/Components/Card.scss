@@ -1,0 +1,112 @@
+
+.div-head {
+    display: flex;
+    align-items: center;
+  
+    
+    .info-card {
+      display: flex;
+      flex-direction: column;
+      .name-profile {
+        text-decoration: none;
+        color: slategray;
+        font-weight: 600;
+      }
+      span {
+        color: slategray;
+        font-size: small;
+      }
+    }
+  }
+  .container-card {
+    padding: 5px;
+    .sub-title {
+      margin-top: 15px;
+  
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #323ebe;
+      }
+    }
+    .tags {
+      display: flex;
+      width: 100%;
+      flex-direction: wrap;
+      
+      justify-content: space-around;
+      color: black;
+  
+      a {
+        
+        padding: auto;
+        text-decoration: none;
+        color: slategray;
+        height: 30px;
+        cursor: pointer;
+      }
+      a:hover {
+        background: rgb(231, 231, 231);
+    
+        border-radius: 5px;
+        
+      }
+    }
+  
+   
+    .footer-card {
+        
+      display: flex;
+      justify-content: space-between;
+  
+      .fot-card-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+  
+        .btn-p {
+            height: 36px;
+            
+           border: none;
+           background-color: white;
+            color: rgb(10, 10, 10);
+        }
+        .btn-p:hover {
+              border-radius: 5px;
+            background-color: #ececec;
+          }
+      }
+      .fot-card-#{right} {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+          color: slategray;
+          font-size: smaller;
+        }
+        .btn-save {
+          height: 36px;
+          width: 100px;
+          border: none;
+          background: #bdbdbd;
+          color: rgb(255, 255, 255);
+          border-radius: 5px;
+        }
+        .btn-save:hover {
+          background-color: #9b9b9b;
+        }
+      }
+    }
+  }
+  .img-profile {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  @media (max-width: 768px) {
+    
+  }
