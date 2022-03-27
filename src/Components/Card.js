@@ -112,7 +112,7 @@ function  Card(props) {
                 <h2 className="sub-title">
                     <a href="/post" >{title}</a>
                 </h2>
-            <div className="tags">
+            <div className="tags d-flex flex-column flex-md-row">
                 
                     {tags.map((tag, index) => {
 

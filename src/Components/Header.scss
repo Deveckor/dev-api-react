@@ -122,7 +122,8 @@
     .btn-#{log} {
       border: none;
       height: 40px;
-      width: 70px;
+      width: 60px;
+      font-size: 12px;
       color: #3b49df;
       background: none;
     }
@@ -130,8 +131,9 @@
       border: none;
       color: white;
       height: 40px;
+      font-size: 12px;
       border-radius: 5px;
-      width: 130px;
+      width: 100px;
       background: #3b49df;
     }
     .btn-#{account}:hover {
