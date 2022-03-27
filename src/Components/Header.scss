@@ -119,6 +119,28 @@
   // Style Header
   
   @media (max-width: 768px) {
+    .btn-#{log} {
+      border: none;
+      height: 40px;
+      width: 70px;
+      color: #3b49df;
+      background: none;
+    }
+    .btn-#{account} {
+      border: none;
+      color: white;
+      height: 40px;
+      border-radius: 5px;
+      width: 130px;
+      background: #3b49df;
+    }
+    .btn-#{account}:hover {
+      background: #323ebe;
+    }
+    .btn-#{log}:hover {
+      background: rgb(231, 231, 231);
+      border-radius: 5px;
+    }
     .header {
       .header-sec {
         .header-left {

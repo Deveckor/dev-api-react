@@ -67,14 +67,14 @@
         justify-content: space-between;
         gap: 10px;
   
-        .btn-save {
+        .btn-p {
             height: 36px;
-            width: 100px;
+            
            border: none;
            background-color: white;
             color: rgb(10, 10, 10);
         }
-        .btn-save:hover {
+        .btn-p:hover {
               border-radius: 5px;
             background-color: #ececec;
           }
@@ -92,7 +92,7 @@
           width: 100px;
           border: none;
           background: #bdbdbd;
-          color: rgb(10, 10, 10);
+          color: rgb(255, 255, 255);
           border-radius: 5px;
         }
         .btn-save:hover {
@@ -106,4 +106,7 @@
     width: 40px;
     border-radius: 50%;
     margin-right: 15px;
+  }
+  @media (max-width: 768px) {
+    
   }

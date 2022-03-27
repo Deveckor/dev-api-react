@@ -121,9 +121,9 @@ function  Card(props) {
                     
             </div>
             <div className="footer-card mt-4 ">
-                <div className="fot-card-left">
-                <button onClick={reactionPatch} className="btn-save">{`🤍 ${reaction}`}</button>
-                <button onClick={commentPatch} className="btn-save">{`💬 ${comment.length}`}</button>
+                <div className="fot-card-left ">
+                <button onClick={reactionPatch} className="btn-p">{`🤍 ${reaction}`}</button>
+                <button onClick={commentPatch} className="btn-p">{`💬 ${comment.length}`}</button>
                     
                 </div>
                 <div className="fot-card-right">
