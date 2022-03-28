@@ -2,7 +2,6 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-
 function EventCard() {
   return (
     <div>
@@ -196,41 +195,98 @@ function EventCard() {
           <Card.Text>
             <Button variant="link">
               <p class="text-sm-start">
-                What is meant by a "shape" in programming
+                How to get data in json format from tweepy.Client()?
               </p>
             </Button>
 
             <Button variant="link">
-              <p class="text-sm-start">Like im 5:What is JQUERY???????</p>
-            </Button>
-            <p class="text-sm-start"></p>
-
-            <Button variant="link">
-              <p class="text-sm-start">Learn Accessibility</p>
-            </Button>
-
-            <Button variant="link">
-              <p class="text-sm-start">
-                Explain private and Public keys (SSH) Like I´m Five
-              </p>
-            </Button>
-
-            <Button variant="link">
-              <blockquote class="blockquote">
-                <p>Explain a "memory leak" like I'm five</p>
-              </blockquote>
-              <figcaption class="blockquote-footer">
-                2<cite title="Source Title">Comments</cite>
-              </figcaption>
-            </Button>
-
-            <Button variant="link">
-              <p class="text-sm-start">Is goto all that bad?</p>
+              <p class="text-sm-start">1 comment </p>
             </Button>
           </Card.Text>
           <div className="d-grid gap-2"></div>
         </Card.Body>
       </Card>
+
+      {/* 6ta Card */}
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" />
+        <Card.Body>
+          <Card.Title>
+            <p class="crayons-card_header">
+              <strong>#challenge</strong>
+            </p>{" "}
+          </Card.Title>
+          <Card.Text>
+            <Button variant="link">
+              <p class="text-sm-start">Break the Code 2 x DEV Chat</p>
+            </Button>
+
+            <Button variant="link">
+              <p class="text-sm-start">85 comments</p>
+            </Button>
+          </Card.Text>
+          <div className="d-grid gap-2"></div>
+        </Card.Body>
+      </Card>
+
+      {/* 7ma Card */}
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" />
+        <Card.Body>
+          <Card.Title>
+            <p class="crayons-card_header">
+              <strong>#meta</strong>
+            </p>{" "}
+          </Card.Title>
+          <Card.Text>
+            <Button variant="link">
+              <p class="text-sm-start">
+                Interested in learning more about Commercial Open Source?
+                There´s a Forem for that.
+              </p>
+            </Button>
+
+            <Button variant="link">
+              <p class="text-sm-start">6 comments</p>
+            </Button>
+            <Button variant="link">
+              <p class="text-sm-start">
+                Forem for Android is Here!🤖
+              </p>
+            </Button>
+            <Button variant="link">
+              <p class="text-sm-start">
+                You can now display your most awesome GitHub repos on your DEV profile
+              </p>
+            </Button>
+            <Button variant="link">
+              <p class="text-sm-start">
+                25 comments
+              </p>
+            </Button>
+            <Button variant="link">
+              <p class="text-sm-start">
+                Introducing the Forem Shop! New Merch, Giveaways, and More.
+              </p>
+              <p class="text-sm-start">
+                53 comments
+              </p>
+            </Button>
+            <Button variant="link">
+              <p class="text-sm-start">
+                What's with the 🦄 ?
+              </p>
+              <p class="text-sm-start"> 35 comments</p>
+            </Button>
+
+
+          </Card.Text>
+          <div className="d-grid gap-2"></div>
+        </Card.Body>
+      </Card>
+
+
+
     </div>
   );
 }
