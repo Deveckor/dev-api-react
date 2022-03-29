@@ -4,7 +4,7 @@ import {Form, Button} from 'react-bootstrap'
 
 function UpdatePost(props) {
     const navigate = useNavigate();
-    let url = 'https://api-devto.herokuapp.com/post'
+    let url = 'https://devto-api.herokuapp.com/post'
     const {token} = props;
     const params = useParams()
     const [data , setData] = useState({});

@@ -2,7 +2,7 @@ import React, {useState, useEffect}from 'react';
 import CardWriter from '../Components/CardWriter';
 
 
-const url = 'https://api-devto.herokuapp.com/writer'
+const url = 'https://devto-api.herokuapp.com/writer'
 
 function SectionWriters() {
     const [writer, setWriters] = useState([]);
@@ -13,7 +13,7 @@ function SectionWriters() {
             try {
                 let res = await fetch(url);
                 let json =await res.json();
-                console.log(json);
+                
                 if (!res.ok) throw new Error({status: res.status, statusText: res.error})
                 let data = json.data.writers;
                 setWriters(data)

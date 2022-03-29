@@ -10,7 +10,7 @@ function  Card(props) {
     
     const {post, img, nameProfile, title, time, tags, reaction, comment, back, id, token} = props;
     
-    let url = 'http://localhost:5000/post/reaction'
+    let url = 'https://devto-api.herokuapp.com/post/reaction'
     
     
     
@@ -25,7 +25,7 @@ function  Card(props) {
                     "Authorization": token
                 }
             }
-            let res = await fetch(`https://api-devto.herokuapp.com/post/${id}`, options);
+            let res = await fetch(`https://devto-api.herokuapp.com/post/${id}`, options);
             let json = await res.json();
 
             let reaction = json.data.post.reaction;
@@ -85,7 +85,7 @@ function  Card(props) {
                 }
                 
             }
-            let res = await fetch(`https://api-devto.herokuapp.com/post/${id}`, option);
+            let res = await fetch(`https://devto-api.herokuapp.com/post/${id}`, option);
             
             if (!res.ok) throw {error: res.error}
             

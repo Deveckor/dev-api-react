@@ -1,11 +1,11 @@
 import React, { useState} from "react";
 import { Form, Button } from "react-bootstrap";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 
 function CreateAccount(props) {
   let navigate = useNavigate();
     
-    const url = 'https://api-devto.herokuapp.com/writer/signup'
+    const url = 'https://devto-api.herokuapp.com//writer/signup'
     const [writer, setWriter] = useState({
         
     })
@@ -71,7 +71,11 @@ function CreateAccount(props) {
       </Form.Group>
       
      
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit"
+      disabled={
+        !writer.name || !writer.avatar || !writer.bio || !writer.nationality || !writer.email || !writer.password
+      }
+      >
         Submit
       </Button>
       

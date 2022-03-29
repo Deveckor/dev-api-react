@@ -3,7 +3,7 @@ import React, { useState} from 'react'
 
 
 const Comment = (props) => {
-    const url = 'https://api-devto.herokuapp.com/post/comment/';
+    const url = 'https://devto-api.herokuapp.com/post/comment/';
     const {token, id, setAddComment} = props;
     const [comment, setComment] = useState({});
 
