@@ -14,6 +14,7 @@ function EventCard() {
         <Card.Body>
           <Card.Title>
             <b>Do You Have What it Takes to Break the Code? (15)</b>
+            
           </Card.Title>
           <Card.Text>
             <p href="https://s1.breakthecode.tech/">→ Play Break the Code 2</p>
