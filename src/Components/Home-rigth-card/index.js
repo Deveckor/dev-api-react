@@ -5,6 +5,31 @@ import Button from "react-bootstrap/Button";
 function EventCard() {
   return (
     <div>
+
+      <Card style={{ width: "18rem" }}>
+        <Card.Img
+          variant="top"
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--x3d32Nqp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w99v8kewpfkdzc7ae272.gif"
+        />
+        <Card.Body>
+          <Card.Title>
+            <b>Do You Have What it Takes to Break the Code? (15)</b>
+            
+          </Card.Title>
+          <Card.Text>
+            <p href="https://s1.breakthecode.tech/">→ Play Break the Code 2</p>
+            
+            <p href="https://dev.to/devteam/do-you-have-what-it-takes-to-break-the-code-2246">→ Learn more</p>
+          
+            <p href="https://dev.to/devteam/break-the-code-2-x-dev-chat-5739">→ Discuss</p>
+          
+          </Card.Text>
+         
+        </Card.Body>
+      </Card>
+
+     
+      {/* 1frst Card*/}
       <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"

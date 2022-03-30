@@ -3,7 +3,7 @@ import React, { useState} from 'react'
 
 
 const Comment = (props) => {
-    const url = 'https://api-devto.herokuapp.com/post/comment/';
+    const url = 'https://devto-api.herokuapp.com/post/comment/';
     const {token, id, setAddComment} = props;
     const [comment, setComment] = useState({});
 
@@ -38,7 +38,12 @@ const Comment = (props) => {
         console.log(comment);
     }
 
+    const cancel = (e)=>{
+        console.log(e.target);
+        setComment(false)
+        window.location.reload(true)
 
+    }
     return (
         <Form className="card p-4 mt-4" onSubmit={createComment}>
     
@@ -57,7 +62,10 @@ const Comment = (props) => {
   <Button variant="primary" type="submit">
     Submit
   </Button>
-        
+  <Button className="mt-4" variant="primary" onClick={cancel}>
+    Cancel
+  </Button>
+
   
 </Form>
     )

@@ -11,7 +11,7 @@ function Login(props){
         email: '',
         password: ''
     });
-    const url = 'https://api-devto.herokuapp.com/writer/login';
+    const url = 'https://devto-api.herokuapp.com/writer/login';
 
 
     const loginApi = async (e) =>{

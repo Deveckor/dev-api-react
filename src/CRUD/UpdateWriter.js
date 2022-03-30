@@ -5,7 +5,7 @@ import {Form, Button} from 'react-bootstrap'
 
 function UpdateWriter(props){
     const navigate = useNavigate();
-    let url = 'https://api-devto.herokuapp.com/writer'
+    let url = 'https://devto-api.herokuapp.com/writer'
     const {token} = props;
     const params = useParams()
     const [data , setData] = useState({});

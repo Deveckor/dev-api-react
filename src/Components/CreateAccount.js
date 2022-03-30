@@ -1,11 +1,11 @@
 import React, { useState} from "react";
 import { Form, Button } from "react-bootstrap";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 
 function CreateAccount(props) {
   let navigate = useNavigate();
     
-    const url = 'https://api-devto.herokuapp.com/writer/signup'
+    const url = 'https://devto-api.herokuapp.com//writer/signup'
     const [writer, setWriter] = useState({
         
     })
@@ -20,6 +20,7 @@ function CreateAccount(props) {
     }
     
     const createAccount = async (e) => {
+      if (!writer) throw {error: 'llena todos los campos'}
         e.preventDefault();
         try {
             let options = {
@@ -29,10 +30,10 @@ function CreateAccount(props) {
             }
             let res = await fetch(url, options);
             
-            
+            if(!res.ok) throw {status: res.status, message: res.statusText}
             alert('Successfully created')
             navigate('/writers')
-            return res;
+            
         } catch (error) {
             alert(error)
         }
@@ -70,7 +71,11 @@ function CreateAccount(props) {
       </Form.Group>
       
      
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit"
+      disabled={
+        !writer.name || !writer.avatar || !writer.bio || !writer.nationality || !writer.email || !writer.password
+      }
+      >
         Submit
       </Button>
       

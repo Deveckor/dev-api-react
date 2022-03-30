@@ -6,11 +6,12 @@ require('./Card.scss')
 
 
 function  Card(props) {
-    const [addComment, setaddComment] = useState(false);
-    
     const {post, img, nameProfile, title, time, tags, reaction, comment, back, id, token} = props;
+    const [addComment, setaddComment] = useState(false);
+    const [react, setReact] = useState(reaction);
     
-    let url = 'http://localhost:5000/post/reaction'
+    
+    let url = 'https://devto-api.herokuapp.com/post/reaction'
     
     
     
@@ -25,15 +26,15 @@ function  Card(props) {
                     "Authorization": token
                 }
             }
-            let res = await fetch(`https://api-devto.herokuapp.com/post/${id}`, options);
+            let res = await fetch(`https://devto-api.herokuapp.com/post/${id}`, options);
             let json = await res.json();
 
-            let reaction = json.data.post.reaction;
+            setReact(json.data.post.reaction)
 
-            
+            console.log(react);
 
     
-            Reaction(reaction);
+            Reaction(react);
             
         } catch (error) {
             console.log(error);
@@ -41,7 +42,7 @@ function  Card(props) {
     }
     const Reaction = async (reaction)=>{
         try {
-            let reac = reaction +1
+            setReact(react +1)
             let option ={
                 method: "PATCH",
                 headers: {
@@ -49,7 +50,7 @@ function  Card(props) {
                     "Content-type": "application/json",
                     "Authorization": token
                 },
-                body: JSON.stringify({"reaction": reac})
+                body: JSON.stringify({"reaction": react})
             }
             let res = await fetch(`${url}/${id}`, option);
             
@@ -57,7 +58,7 @@ function  Card(props) {
             
             
            
-            window.location.reload(true)
+            
         } catch (error) {
             console.log(error.message);
         }
@@ -85,7 +86,7 @@ function  Card(props) {
                 }
                 
             }
-            let res = await fetch(`https://api-devto.herokuapp.com/post/${id}`, option);
+            let res = await fetch(`https://devto-api.herokuapp.com/post/${id}`, option);
             
             if (!res.ok) throw {error: res.error}
             
@@ -122,7 +123,7 @@ function  Card(props) {
             </div>
             <div className="footer-card mt-4 ">
                 <div className="fot-card-left ">
-                <button onClick={reactionPatch} className="btn-p">{`🤍 ${reaction}`}</button>
+                <button onClick={reactionPatch} className="btn-p">{`🤍 ${react}`}</button>
                 <button onClick={commentPatch} className="btn-p">{`💬 ${comment.length}`}</button>
                     
                 </div>

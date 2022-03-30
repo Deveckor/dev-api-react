@@ -25,7 +25,7 @@ function CreatePost(props) {
 
    
         
-        let url = 'https://api-devto.herokuapp.com/post/';
+        let url = 'https://devto-api.herokuapp.com/post/';
 
 
 
