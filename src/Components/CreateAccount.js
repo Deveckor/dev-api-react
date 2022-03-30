@@ -20,7 +20,7 @@ function CreateAccount(props) {
     }
     
     const createAccount = async (e) => {
-      if (!writer) throw {error: 'llena todos los campos'}
+      
         e.preventDefault();
         try {
             let options = {
